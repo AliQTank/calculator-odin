@@ -21,7 +21,7 @@ header {
 p {
     background-color: azure;
     height: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
     font-weight: bold;
     padding: 10px;
 }
@@ -32,13 +32,21 @@ p {
     flex-direction: column;
 }
 
+#second-section {
+    display: flex;
+}
+
 #numbers, #operators, #options {
     border: 1px solid red;
 }
 
-#numbers > button {
+#numbers > button, #operators > button {
     font-size: x-large;
     font-weight: bold;
+}
+
+#numbers {
+
 }
 
 
@@ -46,6 +54,7 @@ p {
 #options {
     display: flex;
     flex-direction: row-reverse;
+    justify-content: space-between;
 }
 
 #options > button {
