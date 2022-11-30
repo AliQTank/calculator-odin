@@ -20,7 +20,7 @@ header {
 
 p {
     background-color: azure;
-    height: 30px;
+    height: 60px;
     margin-bottom: 100px;
     font-weight: bold;
     padding: 10px;
@@ -34,19 +34,21 @@ p {
 
 #second-section {
     display: flex;
+    justify-content: space-between;
 }
 
 #numbers, #operators, #options {
     border: 1px solid red;
 }
 
-#numbers > button, #operators > button {
+#numbers > div > button, #operators > button {
     font-size: x-large;
     font-weight: bold;
 }
 
 #numbers {
-    color: antiquewhite;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 #operators {
@@ -62,7 +64,7 @@ p {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 #options > button {
