@@ -18,6 +18,10 @@ header {
     color: gold;
 }
 
+h2 {
+    text-align: right;
+}
+
 p {
     background-color: azure;
     height: 60px;

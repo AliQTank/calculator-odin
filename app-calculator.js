@@ -1,6 +1,10 @@
 //NUMBERS SELECTOR, CAN BE OPTIMIZED
 
+//
+const para = document.querySelector('p');
 
+
+//NUMBERS SELECTORS
 const selectNumber1 = document.querySelector('#number1');
 const selectNumber2 = document.querySelector('#number2');
 const selectNumber3 = document.querySelector('#number3');
@@ -11,6 +15,12 @@ const selectNumber7 = document.querySelector('#number7');
 const selectNumber8 = document.querySelector('#number8');
 const selectNumber9 = document.querySelector('#number9');
 const selectNumber0 = document.querySelector('#number0');
+
+//OPERATORS SELECTORS
+
+const clearAll = document.querySelector('.clear-all');
+
+// ADD EVENT LISTENERS FOR NUMBERS 
 
 selectNumber0.addEventListener('click', () => {
     console.log(0);
@@ -51,6 +61,13 @@ selectNumber8.addEventListener('click', () => {
 selectNumber9.addEventListener('click', () => {
     console.log(9);
 })
+
+// OPERATORS ADD EVENT LISTENERS
+
+clearAll.addEventListener('click', () => console.clear());
+
+
+// BASIC MATH FUNCTIONS
 
 function add(a, b) {
     return a += b;
