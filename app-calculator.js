@@ -15,6 +15,7 @@ const selectNumber7 = document.querySelector('#number7');
 const selectNumber8 = document.querySelector('#number8');
 const selectNumber9 = document.querySelector('#number9');
 const selectNumber0 = document.querySelector('#number0');
+const floater = document.getElementById('point-floater');
 
 //OPERATORS SELECTORS
 
@@ -72,6 +73,11 @@ selectNumber9.addEventListener('click', () => {
     console.log(9);
 })
 
+floater.addEventListener('click', () => {
+    console.log('.');
+    para.textContent += '.';
+})
+
 // OPERATORS ADD EVENT LISTENERS
 
 clearAll.addEventListener('click', () => {
@@ -118,3 +124,7 @@ function operate(operator, num1, num2) {
             break;
     }    
 }
+
+// SCREEN VALUE
+
+let screenValue = para.innerText;
