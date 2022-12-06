@@ -23,48 +23,60 @@ const clearAll = document.querySelector('.clear-all');
 // ADD EVENT LISTENERS FOR NUMBERS 
 
 selectNumber0.addEventListener('click', () => {
+    para.textContent += 0;
     console.log(0);
 })
 
 selectNumber1.addEventListener('click', () => {
+    para.textContent += 1;
     console.log(1);
 })
 
 selectNumber2.addEventListener('click', () => {
+    para.textContent += 2;
     console.log(2);
 })
 
 selectNumber3.addEventListener('click', () => {
+    para.textContent += 3;
     console.log(3);
 })
 
 selectNumber4.addEventListener('click', () => {
+    para.textContent += 4;
     console.log(4);
 })
 
 selectNumber5.addEventListener('click', () => {
+    para.textContent += 5;
     console.log(5);
 })
 
 selectNumber6.addEventListener('click', () => {
+    para.textContent += 6;
     console.log(6);
 })
 
 selectNumber7.addEventListener('click', () => {
+    para.textContent += 7;
     console.log(7);
 })
 
 selectNumber8.addEventListener('click', () => {
+    para.textContent += 8;
     console.log(8);
 })
 
 selectNumber9.addEventListener('click', () => {
+    para.textContent += 9;
     console.log(9);
 })
 
 // OPERATORS ADD EVENT LISTENERS
 
-clearAll.addEventListener('click', () => console.clear());
+clearAll.addEventListener('click', () => {
+    para.textContent = "";
+    console.clear()});
 
 
 // BASIC MATH FUNCTIONS
