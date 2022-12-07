@@ -2,6 +2,7 @@
 
 //
 const para = document.querySelector('p');
+let displayValue = "";
 
 
 //NUMBERS SELECTORS
@@ -26,63 +27,76 @@ const clearAll = document.querySelector('.clear-all');
 selectNumber0.addEventListener('click', () => {
     para.textContent += 0;
     console.log(0);
+    displayValue = para.innerText;
 })
 
 selectNumber1.addEventListener('click', () => {
     para.textContent += 1;
     console.log(1);
+    displayValue = para.innerText;
 })
 
 selectNumber2.addEventListener('click', () => {
     para.textContent += 2;
     console.log(2);
+    displayValue = para.innerText;
 })
 
 selectNumber3.addEventListener('click', () => {
     para.textContent += 3;
     console.log(3);
+    displayValue = para.innerText;
 })
 
 selectNumber4.addEventListener('click', () => {
     para.textContent += 4;
     console.log(4);
+    displayValue = para.innerText;
 })
 
 selectNumber5.addEventListener('click', () => {
     para.textContent += 5;
     console.log(5);
+    displayValue = para.innerText;
 })
 
 selectNumber6.addEventListener('click', () => {
     para.textContent += 6;
     console.log(6);
+    displayValue = para.innerText;
 })
 
 selectNumber7.addEventListener('click', () => {
     para.textContent += 7;
     console.log(7);
+    displayValue = para.innerText;
 })
 
 selectNumber8.addEventListener('click', () => {
     para.textContent += 8;
     console.log(8);
+    displayValue = para.innerText;
 })
 
 selectNumber9.addEventListener('click', () => {
     para.textContent += 9;
     console.log(9);
+    displayValue = para.innerText;
 })
 
 floater.addEventListener('click', () => {
     console.log('.');
     para.textContent += '.';
+    displayValue = para.innerText;
 })
 
 // OPERATORS ADD EVENT LISTENERS
 
 clearAll.addEventListener('click', () => {
     para.textContent = "";
-    console.clear()});
+    console.clear();
+    displayValue = "";
+});
 
 
 // BASIC MATH FUNCTIONS
@@ -127,4 +141,3 @@ function operate(operator, num1, num2) {
 
 // SCREEN VALUE
 
-let screenValue = para.innerText;
