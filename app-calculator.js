@@ -3,6 +3,7 @@
 //
 const para = document.querySelector('p');
 let displayValue = "";
+let operatorValue = "";
 
 
 //NUMBERS SELECTORS
@@ -21,6 +22,10 @@ const floater = document.getElementById('point-floater');
 //OPERATORS SELECTORS
 
 const clearAll = document.querySelector('.clear-all');
+const plusOperator = document.querySelector('#plus');
+const substractionOperator = document.querySelector('#subtract');
+const multiplyOperator = document.querySelector('#multiply');
+const dividerOperator = document.querySelector('#divide');
 
 // ADD EVENT LISTENERS FOR NUMBERS 
 
@@ -97,6 +102,29 @@ clearAll.addEventListener('click', () => {
     console.clear();
     displayValue = "";
 });
+
+plusOperator.addEventListener('click', () => {
+    console.log('plus pressed');
+    operatorValue = '+';
+})
+
+substractionOperator.addEventListener('click', () => {
+    console.log('subtract operator pressed');
+    operatorValue = '-';
+})
+
+dividerOperator.addEventListener('click', () => {
+    console.log('divider pressed');
+    operatorValue = '/';
+})
+
+multiplyOperator.addEventListener('click', () => {
+    console.log('multiplyer pressed');
+    operatorValue = '*';
+})
+
+
+
 
 
 // BASIC MATH FUNCTIONS
