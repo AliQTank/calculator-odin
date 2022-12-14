@@ -4,6 +4,7 @@
 const para = document.querySelector('p');
 let displayValue = "";
 let operatorValue = "";
+let accumulator = NaN;
 
 
 //NUMBERS SELECTORS
@@ -100,26 +101,32 @@ floater.addEventListener('click', () => {
 clearAll.addEventListener('click', () => {
     para.textContent = "";
     console.clear();
+    accumulator = NaN;
+    operatorValue = null;
     displayValue = "";
 });
 
 plusOperator.addEventListener('click', () => {
     console.log('plus pressed');
+    accumulator = Number(displayValue);
     operatorValue = '+';
 })
 
 substractionOperator.addEventListener('click', () => {
     console.log('subtract operator pressed');
+    accumulator = Number(displayValue);
     operatorValue = '-';
 })
 
 dividerOperator.addEventListener('click', () => {
     console.log('divider pressed');
+    accumulator = Number(displayValue);
     operatorValue = '/';
 })
 
 multiplyOperator.addEventListener('click', () => {
     console.log('multiplyer pressed');
+    accumulator = Number(displayValue);
     operatorValue = '*';
 })
 
@@ -168,4 +175,8 @@ function operate(operator, num1, num2) {
 }
 
 // SCREEN VALUE
+
+if (operatorValue) {
+
+}
 
