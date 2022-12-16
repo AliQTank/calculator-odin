@@ -27,6 +27,7 @@ const plusOperator = document.querySelector('#plus');
 const substractionOperator = document.querySelector('#subtract');
 const multiplyOperator = document.querySelector('#multiply');
 const dividerOperator = document.querySelector('#divide');
+const equalizer = document.querySelector('#equals');
 
 // ADD EVENT LISTENERS FOR NUMBERS 
 
@@ -109,12 +110,14 @@ clearAll.addEventListener('click', () => {
 plusOperator.addEventListener('click', () => {
     if (operatorValue) {
         console.log('plus pressed again');
-        displayValue = "";
+        operatorValue = '+';
+        para.textContent = "";
 
     } else {
         console.log('plus pressed');
         accumulator = Number(displayValue);
         operatorValue = '+';
+        para.textContent = "";
     }
 })
 
@@ -122,18 +125,28 @@ substractionOperator.addEventListener('click', () => {
     console.log('subtract operator pressed');
     accumulator = Number(displayValue);
     operatorValue = '-';
+    para.textContent = "";
 })
 
 dividerOperator.addEventListener('click', () => {
     console.log('divider pressed');
     accumulator = Number(displayValue);
     operatorValue = '/';
+    para.textContent = "";
 })
 
 multiplyOperator.addEventListener('click', () => {
     console.log('multiplyer pressed');
     accumulator = Number(displayValue);
     operatorValue = '*';
+    para.textContent = "";
+})
+
+equalizer.addEventListener('click', () => {
+    console.log('equals');
+    para.textContent = operate(operatorValue, accumulator, Number(displayValue));
+    accumulator = operate(operatorValue, accumulator, Number(displayValue));
+    console.log(accumulator);
 })
 
 
@@ -182,7 +195,4 @@ function operate(operator, num1, num2) {
 
 // SCREEN VALUE
 
-if (operatorValue) {
-
-}
 
