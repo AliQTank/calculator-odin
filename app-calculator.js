@@ -107,9 +107,15 @@ clearAll.addEventListener('click', () => {
 });
 
 plusOperator.addEventListener('click', () => {
-    console.log('plus pressed');
-    accumulator = Number(displayValue);
-    operatorValue = '+';
+    if (operatorValue) {
+        console.log('plus pressed again');
+        displayValue = "";
+
+    } else {
+        console.log('plus pressed');
+        accumulator = Number(displayValue);
+        operatorValue = '+';
+    }
 })
 
 substractionOperator.addEventListener('click', () => {
