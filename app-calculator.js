@@ -5,6 +5,7 @@ const para = document.querySelector('p');
 let displayValue = "";
 let operatorValue = "";
 let accumulator = NaN;
+let secondAccumulator = NaN;
 
 
 //NUMBERS SELECTORS
@@ -27,6 +28,7 @@ const plusOperator = document.querySelector('#plus');
 const substractionOperator = document.querySelector('#subtract');
 const multiplyOperator = document.querySelector('#multiply');
 const dividerOperator = document.querySelector('#divide');
+const equalizer = document.querySelector('#equals');
 
 // ADD EVENT LISTENERS FOR NUMBERS 
 
@@ -107,27 +109,58 @@ clearAll.addEventListener('click', () => {
 });
 
 plusOperator.addEventListener('click', () => {
-    console.log('plus pressed');
-    accumulator = Number(displayValue);
-    operatorValue = '+';
+    if (operatorValue) {
+        console.log('plus pressed again')
+
+    } else {
+        console.log('plus pressed');
+        accumulator = Number(displayValue);
+        operatorValue = '+';
+        para.textContent = "";
+        console.log(`accumulator ${accumulator}`);
+        console.log(`operatorValue ${operatorValue}`);
+        console.log(`displayValue ${displayValue}`);
+    }    
 })
 
 substractionOperator.addEventListener('click', () => {
     console.log('subtract operator pressed');
     accumulator = Number(displayValue);
     operatorValue = '-';
+    para.textContent = "";
+    console.log(`accumulator ${accumulator}`);
+    console.log(`operatorValue ${operatorValue}`);
+    console.log(`displayValue ${displayValue}`);
 })
 
 dividerOperator.addEventListener('click', () => {
     console.log('divider pressed');
     accumulator = Number(displayValue);
     operatorValue = '/';
+    para.textContent = "";
+    console.log(`accumulator ${accumulator}`);
+    console.log(`operatorValue ${operatorValue}`);
+    console.log(`displayValue ${displayValue}`);
 })
 
 multiplyOperator.addEventListener('click', () => {
     console.log('multiplyer pressed');
     accumulator = Number(displayValue);
     operatorValue = '*';
+    para.textContent = "";
+    console.log(`accumulator ${accumulator}`);
+    console.log(`operatorValue ${operatorValue}`);
+    console.log(`displayValue ${displayValue}`);
+})
+
+equalizer.addEventListener('click', () => {
+    console.log('equals');
+    para.textContent = operate(operatorValue, accumulator, Number(displayValue));
+    accumulator = operate(operatorValue, accumulator, Number(displayValue));
+    displayValue = para.textContent;
+    console.log(`accumulator ${accumulator}`);
+    console.log(`operatorValue ${operatorValue}`);
+    console.log(`displayValue ${displayValue}`);
 })
 
 
