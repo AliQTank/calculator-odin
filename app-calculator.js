@@ -102,12 +102,6 @@ floater.addEventListener('click', () => {
     displayValue = para.innerText;
 })
 
-function universalNumberEvents () {
-    para.textContent += null;
-    console.log(undefined);
-    displayValue = para.innerText;
-}
-
 // OPERATORS ADD EVENT LISTENERS
 
 clearAll.addEventListener('click', () => {
@@ -119,11 +113,23 @@ clearAll.addEventListener('click', () => {
     equalizer.disabled = false;
 });
 
+oneDelete.addEventListener('click', () => {
+    accumulator = NaN;
+})
+
 plusOperator.addEventListener('click', () => {
-    console.log('plus pressed');
+    if(operatorValue) {
+        toReduceLinerInOperators();
+        accumulator = operate(operatorValue, accumulator, displayValue);
+
+    } else {
+        console.log('plus pressed');
     operatorValue = '+';
     consoleLoggersForOperators();
     toReduceLinerInOperators();
+
+    }
+    
         
 })
 
@@ -206,5 +212,3 @@ function operate(operator, num1, num2) {
             break;
     }    
 }
-
-// SCREEN VALUE
