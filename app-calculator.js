@@ -155,26 +155,17 @@ equalizer.addEventListener('click', () => {
 
 // BASIC MATH FUNCTIONS
 
-function add(a, b) {
-    return a += b;
-}
+const add = (a, b) => a += b;
 
-function subtract(a, b) {
-    return a -= b;
-}
+const subtract = (a, b) => a -= b;
 
-function multiply(a, b) {
-    return a *= b;
-}
+const multiply = (a, b) => a *= b;
 
-function divide(a, b) {
-    return a /= b;
-}
+const divide = (a, b) => a /= b;
 
 function operate(operator, num1, num2) {
-    let a = num1;
-    let b = num2;
-
+    let a = Number(num1);
+    let b = Number(num2);
 
     switch (operator) {
         
@@ -193,6 +184,6 @@ function operate(operator, num1, num2) {
     }    
 }
 
-// SCREEN VALUE
+
 
 
