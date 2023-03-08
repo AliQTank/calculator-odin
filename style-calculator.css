@@ -28,6 +28,8 @@ p {
     margin-bottom: 100px;
     font-weight: bold;
     padding: 10px;
+    font-size: xx-large;
+    font-size: xxx-large;
 }
 
 #buttons-container {
@@ -80,4 +82,12 @@ button {
     background-color: rgb(24, 98, 181);
     width: 100px;
     height: 100px;
+}
+
+button:hover {
+    background-color: orangered;
+}
+
+button:active {
+    background-color: blueviolet;
 }
