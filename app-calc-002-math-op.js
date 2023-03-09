@@ -58,7 +58,7 @@ let secondAccumulator = NaN; // TO SUBTITUTE FOR DISPLAYVALUE
 
 
 selectNumber0.addEventListener("click", () => {
-    if (Boolean(operatorValue) && !displayValue) {
+    if (Boolean(operatorValue) && !displayValue && para.textContent !== "0.") {
         console.log(0);
         para.textContent = 0;
         displayValue = para.textContent;                
@@ -78,7 +78,7 @@ selectNumber0.addEventListener("click", () => {
     }
 })
 selectNumber1.addEventListener("click", () => {
-    if (operatorValue && !displayValue) {
+    if (operatorValue && !displayValue && para.textContent !== "0.") {
         console.log(1);
         para.textContent = 1;
         displayValue = para.textContent;
@@ -99,7 +99,7 @@ selectNumber1.addEventListener("click", () => {
     }
 })
 selectNumber2.addEventListener("click", () => {
-    if (operatorValue && !displayValue) {
+    if (operatorValue && !displayValue && para.textContent !== "0.") {
         console.log(2);
         para.textContent = 2;
         displayValue = para.textContent;
@@ -120,7 +120,7 @@ selectNumber2.addEventListener("click", () => {
     }
 })
 selectNumber3.addEventListener("click", () => {
-    if (operatorValue && !displayValue) {
+    if (operatorValue && !displayValue && para.textContent !== "0.") {
         console.log(3);
         para.textContent = 3;
         displayValue = para.textContent;
@@ -141,7 +141,7 @@ selectNumber3.addEventListener("click", () => {
     }
 })
 selectNumber4.addEventListener("click", () => {
-    if (operatorValue && !displayValue) {
+    if (operatorValue && !displayValue && para.textContent !== "0.") {
         console.log(4);
         para.textContent = 4;
         displayValue = para.textContent;
@@ -162,7 +162,7 @@ selectNumber4.addEventListener("click", () => {
     }
 })
 selectNumber5.addEventListener("click", () => {
-    if (operatorValue && !displayValue) {
+    if (operatorValue && !displayValue && para.textContent !== "0.") {
         console.log(5);
         para.textContent = 5;
         displayValue = para.textContent;
@@ -183,7 +183,7 @@ selectNumber5.addEventListener("click", () => {
     }
 })
 selectNumber6.addEventListener("click", () => {
-    if (operatorValue && !displayValue) {
+    if (operatorValue && !displayValue && para.textContent !== "0.") {
         console.log(6);
         para.textContent = 6;
         displayValue = para.textContent;
@@ -204,7 +204,7 @@ selectNumber6.addEventListener("click", () => {
     }
 })
 selectNumber7.addEventListener("click", () => {
-    if (operatorValue && !displayValue) {
+    if (operatorValue && !displayValue && para.textContent !== "0.") {
         console.log(7);
         para.textContent = 7;
         displayValue = para.textContent;
@@ -225,7 +225,7 @@ selectNumber7.addEventListener("click", () => {
     }
 })
 selectNumber8.addEventListener("click", () => {
-    if (operatorValue && !displayValue) {
+    if (operatorValue && !displayValue && para.textContent !== "0.") {
         console.log(8);
         para.textContent = 8;
         displayValue = para.textContent;
@@ -246,7 +246,7 @@ selectNumber8.addEventListener("click", () => {
     }
 })
 selectNumber9.addEventListener("click", () => {
-    if (operatorValue && !displayValue) {
+    if (operatorValue && !displayValue && para.textContent !== "0.") {
         console.log(9);
         para.textContent = 9;
         displayValue = para.textContent;
@@ -366,23 +366,17 @@ equalizer.addEventListener("click", () => {
         accumulator = displayValue;
         para.textContent = accumulator;
         displayValue = 0;
+    } else if (!operatorValue) {
+        para.textContent = accumulator;
+    } else if (!displayValue && secondAccumulator !== NaN) {
+        accumulator = operate(operatorValue, accumulator, secondAccumulator);
+        para.textContent = accumulator;
     } else {
-        if (!operatorValue) {
-            para.textContent = accumulator;
-        }
-        else {
-            if (!displayValue && secondAccumulator !== NaN) {
-                accumulator = operate(operatorValue, accumulator, secondAccumulator);
-                para.textContent = accumulator;
-            }
-            else {
-                accumulator = operate(operatorValue, accumulator, displayValue); 
-                para.textContent = accumulator;
-                secondAccumulator = displayValue;
-                displayValue = 0;
-                console.log("=");
-                console.log(accumulator);
-            }
-        }
-    }
-})
+        accumulator = operate(operatorValue, accumulator, displayValue); 
+        para.textContent = accumulator;
+        secondAccumulator = displayValue;
+        displayValue = 0;
+        console.log("=");
+        console.log(accumulator);
+    }     
+    })
