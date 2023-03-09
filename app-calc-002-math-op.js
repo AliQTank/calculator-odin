@@ -54,7 +54,7 @@ const para = document.querySelector("p");
 let displayValue = 0;
 let operatorValue = "";
 let accumulator = 0;
-let secondAccumulator = NaN; // TO SUBTITUTE FOR DISPLAYVALUE
+let secondAccumulator = NaN; 
 
 
 selectNumber0.addEventListener("click", () => {
@@ -380,3 +380,8 @@ equalizer.addEventListener("click", () => {
         console.log(accumulator);
     }     
     })
+
+oneDelete.addEventListener("click", () => {
+    para.textContent = para.textContent.split("").splice(0, para.textContent.length-1).join("");
+    displayValue = para.textContent;
+})
