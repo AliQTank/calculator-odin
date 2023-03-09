@@ -2,14 +2,14 @@
 
 //
 const para = document.querySelector('p');
-let displayValue = Number("");
+let displayValue = 0;
 let operatorValue = "";
-let accumulator = NaN;
+let accumulator = 0;
 let secondAccumulator = NaN;
 
 
 //NUMBERS SELECTORS
-const selectNumber1 = document.querySelector('#number1');
+const selectNumber1 = document.querySelector('.NUMBER-1');
 const selectNumber2 = document.querySelector('#number2');
 const selectNumber3 = document.querySelector('#number3');
 const selectNumber4 = document.querySelector('#number4');
@@ -40,97 +40,103 @@ selectNumber0.addEventListener('click', () => {
     para.textContent += 0;
     console.log(0);
     displayValue = para.innerText;
+    consoleLoggersForOperators();
 })
 
 selectNumber1.addEventListener('click', () => {
     para.textContent += 1;
     console.log(1);
     displayValue = para.innerText;
+    consoleLoggersForOperators();
 })
 
 selectNumber2.addEventListener('click', () => {
     para.textContent += 2;
     console.log(2);
     displayValue = para.innerText;
+    consoleLoggersForOperators();
 })
 
 selectNumber3.addEventListener('click', () => {
     para.textContent += 3;
     console.log(3);
     displayValue = para.innerText;
+    consoleLoggersForOperators();
 })
 
 selectNumber4.addEventListener('click', () => {
     para.textContent += 4;
     console.log(4);
     displayValue = para.innerText;
+    consoleLoggersForOperators();
 })
 
 selectNumber5.addEventListener('click', () => {
     para.textContent += 5;
     console.log(5);
     displayValue = para.innerText;
+    consoleLoggersForOperators();
 })
 
 selectNumber6.addEventListener('click', () => {
     para.textContent += 6;
     console.log(6);
     displayValue = para.innerText;
+    consoleLoggersForOperators();
 })
 
 selectNumber7.addEventListener('click', () => {
     para.textContent += 7;
     console.log(7);
     displayValue = para.innerText;
+    consoleLoggersForOperators();
 })
 
 selectNumber8.addEventListener('click', () => {
     para.textContent += 8;
     console.log(8);
     displayValue = para.innerText;
+    consoleLoggersForOperators();
 })
 
 selectNumber9.addEventListener('click', () => {
     para.textContent += 9;
     console.log(9);
     displayValue = para.innerText;
+    consoleLoggersForOperators();
 })
 
 floater.addEventListener('click', () => {
     para.textContent += '.';
     console.log('.');
     displayValue = para.innerText;
+    consoleLoggersForOperators();
 })
 
 // OPERATORS ADD EVENT LISTENERS
 
 clearAll.addEventListener('click', () => {
-    para.textContent = "";
-    console.clear();
-    accumulator = NaN;
-    operatorValue = null;
     displayValue = Number("");
+    para.textContent = "";
+    accumulator = 0;
+    operatorValue = null;
+    secondAccumulator = 0;
     equalizer.disabled = false;
+    console.clear();
 });
 
 oneDelete.addEventListener('click', () => {
-    accumulator = NaN;
+    accumulator = displayValue;
+    para.textContent = "";
+    displayValue = 0;
 })
 
 plusOperator.addEventListener('click', () => {
-    if(operatorValue) {
-        toReduceLinerInOperators();
-        accumulator = operate(operatorValue, accumulator, displayValue);
-
-    } else {
-        console.log('plus pressed');
+    console.log('plus operator pressed');
     operatorValue = '+';
-    consoleLoggersForOperators();
-    toReduceLinerInOperators();
-
-    }
-    
-        
+    accumulator = operate(operatorValue, accumulator, displayValue);
+    para.textContent = accumulator;
+    displayValue = 0;
 })
 
 const operatorValueArray = ["+", "-", "/", "*"];
@@ -138,26 +144,28 @@ const operatorValueArray = ["+", "-", "/", "*"];
 substractionOperator.addEventListener('click', () => {
     console.log('subtract operator pressed');
     operatorValue = '-';
-    consoleLoggersForOperators();
     toReduceLinerInOperators();
 })
 
 dividerOperator.addEventListener('click', () => {
     console.log('divider pressed');
     operatorValue = '/';
-    consoleLoggersForOperators();
     toReduceLinerInOperators();
 })
 
 multiplyOperator.addEventListener('click', () => {
     console.log('multiplyer pressed');
     operatorValue = '*';
-    consoleLoggersForOperators();
     toReduceLinerInOperators();
 })
 
 equalizer.addEventListener('click', () => {
     console.log('equals');
+    if (!operatorValue && !accumulator) {
+        accumulator = displayValue;
+        para.textContent = "";
+
+    }
     para.textContent = operate(operatorValue, accumulator, displayValue);
     accumulator = operate(operatorValue, accumulator, displayValue);
     displayValue = para.textContent;
@@ -172,9 +180,11 @@ function consoleLoggersForOperators () {
 }
 
 function toReduceLinerInOperators () {
-    para.textContent = "";
-    equalizer.disabled = false;
     accumulator = displayValue;
+    para.textContent = "";
+    displayValue = 0;
+    equalizer.disabled = false;
+    consoleLoggersForOperators();
 }
 
 
