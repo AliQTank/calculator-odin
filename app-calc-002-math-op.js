@@ -294,7 +294,7 @@ floater.addEventListener("click", () => {
     console.log(".");    
 })
 
-selectNumber2.disabled = true;
+// selectNumber2.disabled = true;
 selectNumber3.disabled = true;
 selectNumber4.disabled = true;
 selectNumber5.disabled = true;
@@ -325,18 +325,14 @@ plusOperator.addEventListener("click", () => {
     } else if (!operatorValue) {
         operatorValue = "+";
         para.textContent = accumulator;
-    } else if (operatorValue === "-" || operatorValue === "*" || operatorValue === "/") {
+    } else if (displayValue === 0) {
+        operatorValue = "+";
+    } else {
         secondAccumulator = displayValue;
         accumulator = operate(operatorValue, accumulator, displayValue);
         para.textContent = accumulator;
         displayValue = 0;
         operatorValue = "+";
-    } else if (displayValue === 0) {} else {
-        secondAccumulator = displayValue;
-        accumulator = operate(operatorValue, accumulator, displayValue);
-        para.textContent = accumulator;
-        displayValue = 0;
-        //operatorValue = "+";
     }
 })
 substractionOperator.addEventListener("click", () => {
@@ -347,18 +343,14 @@ substractionOperator.addEventListener("click", () => {
     } else if (!operatorValue) {
         operatorValue = "-";
         para.textContent = accumulator;
-    } else if (operatorValue === "+" || operatorValue === "*" || operatorValue === "/")  {
+    } else if (displayValue === 0) {
+        operatorValue = "-";
+    } else {
         secondAccumulator = displayValue;
         accumulator = operate(operatorValue, accumulator, displayValue);
         para.textContent = accumulator;
         displayValue = 0;
         operatorValue = "-";
-    } else if (displayValue === 0) {} else {
-        secondAccumulator = displayValue;
-        accumulator = operate(operatorValue, accumulator, displayValue);
-        para.textContent = accumulator;
-        displayValue = 0;
-        //operatorValue = "-";
     } 
 })
 multiplyOperator.addEventListener("click", () => {
@@ -369,18 +361,14 @@ multiplyOperator.addEventListener("click", () => {
     } else if (!operatorValue) {
         operatorValue = "*";
         para.textContent = accumulator;
-    } else if (operatorValue === "+" || operatorValue === "-" || operatorValue === "/")  {
+    } else if (displayValue === 0) {
+        operatorValue = "*";
+    } else {
         secondAccumulator = displayValue;
         accumulator = operate(operatorValue, accumulator, displayValue);
         para.textContent = accumulator;
         displayValue = 0;
         operatorValue = "*";
-    } else if (displayValue === 0) {} else {
-        secondAccumulator = displayValue;
-        accumulator = operate(operatorValue, accumulator, displayValue);
-        para.textContent = accumulator;
-        displayValue = 0;
-        //operatorValue = "-";
     }    
 })
 dividerOperator.addEventListener("click", () => {
@@ -391,18 +379,14 @@ dividerOperator.addEventListener("click", () => {
     } else if (!operatorValue) {
         operatorValue = "/";
         para.textContent = accumulator;
-    } else if (operatorValue === "+" || operatorValue === "-" || operatorValue === "*")  {
+    } else if (displayValue === 0) {
+        operatorValue = "/";
+    } else {
         secondAccumulator = displayValue;
         accumulator = operate(operatorValue, accumulator, displayValue);
         para.textContent = accumulator;
         displayValue = 0;
         operatorValue = "/";
-    } else if (displayValue === 0) {} else {
-        secondAccumulator = displayValue;
-        accumulator = operate(operatorValue, accumulator, displayValue);
-        para.textContent = accumulator;
-        displayValue = 0;
-        //operatorValue = "-";
     }     
 })
 
