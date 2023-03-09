@@ -57,24 +57,6 @@ let accumulator = 0;
 let secondAccumulator = NaN; // TO SUBTITUTE FOR DISPLAYVALUE
 
 
-// NOT DISCARTED YET, BUT ABOUT TO
-// class NumberButtons {
-//     constructor(value, selector) {
-//         this.value = value;
-//         this.selector = selector;
-//     }
-// }
-// let number0 = new NumberButtons(0, "#number0");
-// let number1 = new NumberButtons(1, "#number1");
-// let number2 = new NumberButtons(2, "#number2");
-// let number3 = new NumberButtons(3, "#number3");
-// let number4 = new NumberButtons(4, "#number4");
-// let number5 = new NumberButtons(5, "#number5");
-// let number6 = new NumberButtons(6, "#number6");
-// let number7 = new NumberButtons(7, "#number7");
-// let number8 = new NumberButtons(8, "#number8");
-// let number9 = new NumberButtons(9, "#number9");
-
 selectNumber0.addEventListener("click", () => {
     if (Boolean(operatorValue) && !displayValue) {
         console.log(0);
@@ -137,153 +119,153 @@ selectNumber2.addEventListener("click", () => {
         }        
     }
 })
-// selectNumber3.addEventListener("click", () => {
-//     if (operatorValue && !displayValue) {
-//         console.log(3);
-//         para.textContent = 3;
-//         displayValue = para.textContent;
+selectNumber3.addEventListener("click", () => {
+    if (operatorValue && !displayValue) {
+        console.log(3);
+        para.textContent = 3;
+        displayValue = para.textContent;
                 
-//     }
-//     else {
-//         if(!operatorValue && accumulator) {
-//             accumulator = 0;
-//             console.log(3);
-//             para.textContent = 3;
-//             displayValue = para.textContent;
-//         }
-//         else {
-//             console.log(3);
-//             para.textContent += 3;
-//             displayValue = para.textContent;
-//         }        
-//     }
-// })
-// selectNumber4.addEventListener("click", () => {
-//     if (operatorValue && !displayValue) {
-//         console.log(4);
-//         para.textContent = 4;
-//         displayValue = para.textContent;
+    }
+    else {
+        if(!operatorValue && accumulator) {
+            accumulator = 0;
+            console.log(3);
+            para.textContent = 3;
+            displayValue = para.textContent;
+        }
+        else {
+            console.log(3);
+            para.textContent += 3;
+            displayValue = para.textContent;
+        }        
+    }
+})
+selectNumber4.addEventListener("click", () => {
+    if (operatorValue && !displayValue) {
+        console.log(4);
+        para.textContent = 4;
+        displayValue = para.textContent;
                 
-//     }
-//     else {
-//         if(!operatorValue && accumulator) {
-//             accumulator = 0;
-//             console.log(4);
-//             para.textContent = 4;
-//             displayValue = para.textContent;
-//         }
-//         else {
-//             console.log(4);
-//             para.textContent += 4;
-//             displayValue = para.textContent;
-//         }        
-//     }
-// })
-// selectNumber5.addEventListener("click", () => {
-//     if (operatorValue && !displayValue) {
-//         console.log(5);
-//         para.textContent = 5;
-//         displayValue = para.textContent;
+    }
+    else {
+        if(!operatorValue && accumulator) {
+            accumulator = 0;
+            console.log(4);
+            para.textContent = 4;
+            displayValue = para.textContent;
+        }
+        else {
+            console.log(4);
+            para.textContent += 4;
+            displayValue = para.textContent;
+        }        
+    }
+})
+selectNumber5.addEventListener("click", () => {
+    if (operatorValue && !displayValue) {
+        console.log(5);
+        para.textContent = 5;
+        displayValue = para.textContent;
                 
-//     }
-//     else {
-//         if(!operatorValue && accumulator) {
-//             accumulator = 0;
-//             console.log(5);
-//             para.textContent = 5;
-//             displayValue = para.textContent;
-//         }
-//         else {
-//             console.log(5);
-//             para.textContent += 5;
-//             displayValue = para.textContent;
-//         }        
-//     }
-// })
-// selectNumber6.addEventListener("click", () => {
-//     if (operatorValue && !displayValue) {
-//         console.log(6);
-//         para.textContent = 6;
-//         displayValue = para.textContent;
+    }
+    else {
+        if(!operatorValue && accumulator) {
+            accumulator = 0;
+            console.log(5);
+            para.textContent = 5;
+            displayValue = para.textContent;
+        }
+        else {
+            console.log(5);
+            para.textContent += 5;
+            displayValue = para.textContent;
+        }        
+    }
+})
+selectNumber6.addEventListener("click", () => {
+    if (operatorValue && !displayValue) {
+        console.log(6);
+        para.textContent = 6;
+        displayValue = para.textContent;
                 
-//     }
-//     else {
-//         if(!operatorValue && accumulator) {
-//             accumulator = 0;
-//             console.log(6);
-//             para.textContent = 6;
-//             displayValue = para.textContent;
-//         }
-//         else {
-//             console.log(6);
-//             para.textContent += 6;
-//             displayValue = para.textContent;
-//         }        
-//     }
-// })
-// selectNumber7.addEventListener("click", () => {
-//     if (operatorValue && !displayValue) {
-//         console.log(7);
-//         para.textContent = 7;
-//         displayValue = para.textContent;
+    }
+    else {
+        if(!operatorValue && accumulator) {
+            accumulator = 0;
+            console.log(6);
+            para.textContent = 6;
+            displayValue = para.textContent;
+        }
+        else {
+            console.log(6);
+            para.textContent += 6;
+            displayValue = para.textContent;
+        }        
+    }
+})
+selectNumber7.addEventListener("click", () => {
+    if (operatorValue && !displayValue) {
+        console.log(7);
+        para.textContent = 7;
+        displayValue = para.textContent;
                 
-//     }
-//     else {
-//         if(!operatorValue && accumulator) {
-//             accumulator = 0;
-//             console.log(7);
-//             para.textContent = 7;
-//             displayValue = para.textContent;
-//         }
-//         else {
-//             console.log(7);
-//             para.textContent += 7;
-//             displayValue = para.textContent;
-//         }        
-//     }
-// })
-// selectNumber8.addEventListener("click", () => {
-//     if (operatorValue && !displayValue) {
-//         console.log(8);
-//         para.textContent = 8;
-//         displayValue = para.textContent;
+    }
+    else {
+        if(!operatorValue && accumulator) {
+            accumulator = 0;
+            console.log(7);
+            para.textContent = 7;
+            displayValue = para.textContent;
+        }
+        else {
+            console.log(7);
+            para.textContent += 7;
+            displayValue = para.textContent;
+        }        
+    }
+})
+selectNumber8.addEventListener("click", () => {
+    if (operatorValue && !displayValue) {
+        console.log(8);
+        para.textContent = 8;
+        displayValue = para.textContent;
                 
-//     }
-//     else {
-//         if(!operatorValue && accumulator) {
-//             accumulator = 0;
-//             console.log(8);
-//             para.textContent = 8;
-//             displayValue = para.textContent;
-//         }
-//         else {
-//             console.log(8);
-//             para.textContent += 8;
-//             displayValue = para.textContent;
-//         }        
-//     }
-// })
-// selectNumber9.addEventListener("click", () => {
-//     if (operatorValue && !displayValue) {
-//         console.log(9);
-//         para.textContent = 9;
-//         displayValue = para.textContent;
+    }
+    else {
+        if(!operatorValue && accumulator) {
+            accumulator = 0;
+            console.log(8);
+            para.textContent = 8;
+            displayValue = para.textContent;
+        }
+        else {
+            console.log(8);
+            para.textContent += 8;
+            displayValue = para.textContent;
+        }        
+    }
+})
+selectNumber9.addEventListener("click", () => {
+    if (operatorValue && !displayValue) {
+        console.log(9);
+        para.textContent = 9;
+        displayValue = para.textContent;
                 
-//     }
-//     else {
-//         if(!operatorValue && accumulator) {
-//             accumulator = 0;
-//             console.log(9);
-//             para.textContent = 9;
-//             displayValue = para.textContent;
-//         }
-//         else {
-//             console.log(9);
-//             para.textContent += 9;
-//             displayValue = para.textContent;
-//         }        
-//     }
-// })
+    }
+    else {
+        if(!operatorValue && accumulator) {
+            accumulator = 0;
+            console.log(9);
+            para.textContent = 9;
+            displayValue = para.textContent;
+        }
+        else {
+            console.log(9);
+            para.textContent += 9;
+            displayValue = para.textContent;
+        }        
+    }
+})
 floater.addEventListener("click", () => {
     if (displayValue ) {
         para.textContent += ".";
@@ -293,17 +275,6 @@ floater.addEventListener("click", () => {
     }
     console.log(".");    
 })
-
-// selectNumber2.disabled = true;
-selectNumber3.disabled = true;
-selectNumber4.disabled = true;
-selectNumber5.disabled = true;
-selectNumber6.disabled = true;
-selectNumber7.disabled = true;
-selectNumber8.disabled = true;
-selectNumber9.disabled = true;
-// floater.disabled = true;
-
 
 // NOT NUMBERS
 
@@ -415,7 +386,3 @@ equalizer.addEventListener("click", () => {
         }
     }
 })
-
-// substractionOperator.disabled = true;
-// multiplyOperator.disabled = true;
-// dividerOperator.disabled = true;
