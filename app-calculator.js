@@ -382,6 +382,9 @@ equalizer.addEventListener("click", () => {
     })
 
 oneDelete.addEventListener("click", () => {
-    para.textContent = para.textContent.split("").splice(0, para.textContent.length-1).join("");
+    if (!accumulator || displayValue) {
+        para.textContent = para.textContent.split("").splice(0, para.textContent.length-1).join("");
     displayValue = para.textContent;
+    } else {}
+    
 })
